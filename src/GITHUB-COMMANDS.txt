@@ -1,0 +1,143 @@
+🚀 GITHUB & DEPLOYMENT COMMANDS
+
+Copy and paste these commands to deploy your Emotivis landing page.
+
+═══════════════════════════════════════════════════════════
+
+STEP 1: INITIAL SETUP (First Time Only)
+═══════════════════════════════════════════════════════════
+
+# Initialize git repository
+git init
+
+# Add all files to staging
+git add .
+
+# Create first commit
+git commit -m "Initial commit: Emotivis landing page with dark futuristic theme"
+
+# Connect to GitHub (replace YOUR-USERNAME with your GitHub username)
+git remote add origin https://github.com/YOUR-USERNAME/emotivis-landing.git
+
+# Rename branch to main (if needed)
+git branch -M main
+
+# Push to GitHub
+git push -u origin main
+
+═══════════════════════════════════════════════════════════
+
+STEP 2: MAKING UPDATES (After First Deployment)
+═══════════════════════════════════════════════════════════
+
+# Check what files changed
+git status
+
+# Add specific file
+git add path/to/file.tsx
+
+# OR add all changed files
+git add .
+
+# Commit with descriptive message
+git commit -m "Update pricing tiers"
+
+# Push to GitHub (triggers auto-deploy on Vercel)
+git push
+
+═══════════════════════════════════════════════════════════
+
+USEFUL GIT COMMANDS
+═══════════════════════════════════════════════════════════
+
+# See commit history
+git log --oneline
+
+# Undo last commit (keeps changes)
+git reset --soft HEAD~1
+
+# Discard all local changes
+git reset --hard
+
+# See what changed in a file
+git diff filename.tsx
+
+# Create a new branch
+git checkout -b feature/new-section
+
+# Switch back to main branch
+git checkout main
+
+# See all branches
+git branch
+
+═══════════════════════════════════════════════════════════
+
+COMMON COMMIT MESSAGE EXAMPLES
+═══════════════════════════════════════════════════════════
+
+git commit -m "Add Emotivis logo to navigation"
+git commit -m "Update pricing: Change Empower tier to $49/month"
+git commit -m "Fix: Mobile responsive layout on Features section"
+git commit -m "Add new testimonial from Fortune 500 client"
+git commit -m "Update hero CTA button text"
+git commit -m "Enhance: Add animation to pricing cards"
+git commit -m "Fix broken integration logos"
+git commit -m "Update contact form email address"
+
+═══════════════════════════════════════════════════════════
+
+VERCEL DEPLOYMENT
+═══════════════════════════════════════════════════════════
+
+# Install Vercel CLI (one time)
+npm install -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to preview
+vercel
+
+# Deploy to production
+vercel --prod
+
+# Check deployment logs
+vercel logs
+
+═══════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════════
+
+# If "git push" fails with authentication error:
+# Use GitHub's personal access token instead of password
+# Generate at: https://github.com/settings/tokens
+
+# If you need to change remote URL:
+git remote set-url origin https://github.com/YOUR-USERNAME/emotivis-landing.git
+
+# Verify remote URL:
+git remote -v
+
+# If you accidentally committed sensitive data:
+git reset --soft HEAD~1
+# Remove sensitive data
+git add .
+git commit -m "Remove sensitive data"
+
+═══════════════════════════════════════════════════════════
+
+📚 WORKFLOW SUMMARY
+═══════════════════════════════════════════════════════════
+
+1. Make changes to files
+2. Test locally: npm run dev
+3. Stage changes: git add .
+4. Commit: git commit -m "Description of changes"
+5. Push: git push
+6. Vercel automatically deploys! ✨
+
+Check deployment status: https://vercel.com/dashboard
+
+═══════════════════════════════════════════════════════════
